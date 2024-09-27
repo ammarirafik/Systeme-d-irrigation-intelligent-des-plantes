@@ -1,0 +1,32 @@
+import React from 'react';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+const HomeButton = () => {
+  const navigation = useNavigation();
+
+  const handlePress = () => {
+    navigation.goBack(); // Utilisez la fonction goBack pour retourner à l'écran précédent
+  };
+
+
+  return (
+    <TouchableOpacity style={styles.homeButton} onPress={handlePress}>
+      <Image source={require('../assets/bouton-daccueil.png')} style={styles.homeIcon} />
+    </TouchableOpacity>
+  );
+};
+
+export default HomeButton;
+const styles = StyleSheet.create({
+  homeButton: {
+    position: 'absolute',
+    bottom: 10, // Placer le bouton au bas de l'écran
+    alignSelf: 'center', // Centrer horizontalement
+    zIndex: 1, // Assurez-vous que le bouton Home est au-dessus de tout autre élément
+  },
+  homeIcon: {
+    width: 40,
+    height: 30,
+  },
+});
+

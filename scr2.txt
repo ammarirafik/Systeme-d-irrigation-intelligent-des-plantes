@@ -1,0 +1,114 @@
+import React from 'react';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'; // Importez TouchableOpacity depuis react-native
+import { getDatabase, ref, push, set } from 'firebase/database'; // Importez les fonctions Firebase nécessaires pour envoyer des données
+import { initializeApp } from 'firebase/app'; // Importez la fonction d'initialisation Firebase
+import { useNavigation } from '@react-navigation/native'; // Importez la fonction useNavigation depuis @react-navigation/native
+import HomeButton from './HomeButton'; // Import du composant HomeButton
+// Ajoutez votre configuration Firebase ici
+const firebaseConfig = {
+  apiKey: "AIzaSyBiyof114SEvTcsGJdVV3tKrzqAO-EwmR0",
+  authDomain: "plante-9ebda.firebaseapp.com",
+  databaseURL: "https://plante-9ebda-default-rtdb.firebaseio.com",
+  projectId: "plante-9ebda",
+  storageBucket: "plante-9ebda.appspot.com",
+  messagingSenderId: "1079762827569",
+  appId: "1:1079762827569:web:aa53c8713d706e52cf5810",
+  measurementId: "G-5KN15EML5B"
+};
+
+// Initialisez Firebase avec votre configuration
+const app = initializeApp(firebaseConfig);
+
+const Screen2 = () => {
+  const navigation = useNavigation(); // Utilisez la fonction useNavigation pour obtenir l'objet de navigation
+
+  // Fonction pour envoyer les données à Firebase et naviguer vers une autre page
+  const sendDataAndNavigate = async (plantName) => {
+    try {
+      const database = getDatabase(); // Obtenez une référence à la base de données Firebase
+      const plantRef = ref(database, 'plante'); // Référence à l'emplacement 'plantes' dans la base de données
+      const newPlantRef = push(plantRef); // Générer une clé unique
+      const newPlantKey = newPlantRef.key; // Récupérer la clé unique générée
+      await set(ref(database, `plante`), plantName); // Envoyer la clé unique avec le nom de la plante comme valeur associée
+      console.log('Data sent successfully to Firebase!');
+      navigation.navigate('Screen3'); // Naviguer vers l'écran Screen3 après avoir envoyé les données
+    } catch (error) {
+      console.error('Error sending data to Firebase: ', error);
+    }
+  };
+
+
+ return (
+     <View style={styles.container}>
+       <View style={styles.imagesRow}>
+         <View style={styles.imageContainer}>
+           <Image source={require('../assets/citron.png')} style={styles.image} />
+           <TouchableOpacity style={styles.button} onPress={() => { sendDataAndNavigate("Citron"); console.log("Button 1 pressed"); }}>
+             <Text style={styles.buttonText}>Citron</Text>
+           </TouchableOpacity>
+         </View>
+         <View style={[styles.imageContainer, styles.spaceBetweenImages]}>
+           <Image source={require('../assets/menthe1.jpg')} style={styles.image} />
+           <TouchableOpacity style={styles.button} onPress={() => { sendDataAndNavigate("menthe"); console.log("Button 1 pressed"); }}>
+             <Text style={styles.buttonText}>Menthe</Text>
+           </TouchableOpacity>
+         </View>
+       </View>
+       <View style={styles.imagesRow}>
+         <View style={styles.imageContainer}>
+           <Image source={require('../assets/AL001-02 tomate_0.jpg')} style={styles.image} />
+           <TouchableOpacity style={styles.button} onPress={() => { sendDataAndNavigate("tomate"); console.log("Button 1 pressed"); }}>
+             <Text style={styles.buttonText}>Tomate</Text>
+           </TouchableOpacity>
+         </View>
+         <View style={[styles.imageContainer, styles.spaceBetweenImages]}>
+           <Image source={require('../assets/carotte.jpg')} style={styles.image} />
+           <TouchableOpacity style={styles.button} onPress={() => { sendDataAndNavigate("carotte"); console.log("Button 1 pressed"); }}>
+             <Text style={styles.buttonText}>Carotte</Text>
+           </TouchableOpacity>
+         </View>
+       </View>
+       {/* Bouton Home */}
+       <HomeButton />
+     </View>
+   );
+ };
+
+ export default Screen2;
+
+ const styles = StyleSheet.create({
+   container: {
+     flex: 1,
+     backgroundColor: '#fff',
+     alignItems: 'center',
+     justifyContent: 'center',
+   },
+   imagesRow: {
+     flexDirection: 'row',
+     justifyContent: 'space-around',
+     alignItems: 'center',
+     marginBottom: 20,
+   },
+   imageContainer: {
+     alignItems: 'center',
+   },
+   spaceBetweenImages: {
+     marginRight: 5, // Ajustez cet espace selon vos préférences
+   },
+   image: {
+     width: 200, // Modifier la taille de l'image
+     height: 200, // Modifier la taille de l'image
+     resizeMode: 'cover',
+   },
+   button: {
+     backgroundColor: 'blue',
+     padding: 10,
+     borderRadius: 5,
+     marginTop: 20,
+   },
+   buttonText: {
+     color: 'white',
+     fontSize: 16,
+     fontWeight: 'bold',
+   },
+ });

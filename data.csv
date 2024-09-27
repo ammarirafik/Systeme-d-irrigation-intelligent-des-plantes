@@ -1,0 +1,100 @@
+plante;humidite du sol;temperature;luminosite;etat d'arrosage 
+Tomate;50;25;8000;arroser
+Tomate;63;24.5;8100;non arroser
+Tomate;57;27.5;7700;arroser
+Tomate;60;25.7;7900;non arroser
+Tomate;55;26.2;7450;non arroser
+Tomate;58;24.8;8250;arroser
+Tomate;62;27.3;7850;arroser
+Tomate;61;25.3;7950;non arroser
+Tomate;59;26.8;7550;non arroser
+Tomate;63;24.2;8150;non arroser
+Tomate;57;27.8;7750;arroser
+Tomate;60;25.4;7850;non arroser
+Tomate;55;26.5;7400;non arroser
+Tomate;58;24.6;8300;arroser
+Tomate;62;27.5;7800;arroser
+Tomate;60;25;8000;arroser
+Tomate;62;27;7800;arroser
+Tomate;55;26;7500;non arroser
+Tomate;58;24;8200;arroser
+Laitue;60;22;7000;non arroser
+Laitue;58;24.5;7500;non arroser
+Laitue;55;26.0;7200;arroser
+Laitue;62;25.8;7800;arroser
+Laitue;59;24.0;7700;non arroser
+Laitue;56;25.5;7300;arroser
+Laitue;60;23.7;7400;non arroser
+Laitue;57;26.2;7600;arroser
+Laitue;58;24.8;7900;non arroser
+Laitue;59;25.6;7700;non arroser
+Laitue;56;25.1;7500;arroser
+Laitue;61;24.9;7600;arroser
+Laitue;57;25.2;7700;arroser
+Laitue;60;26.0;7800;arroser
+Laitue;55;24.7;7400;non arroser
+Laitue;58;25.3;7500;arroser
+Laitue;59;26.5;7800;arroser
+Laitue;56;24.8;7600;arroser
+Laitue;61;25.7;7700;arroser
+Laitue;57;26.2;7900;arroser
+Laitue;60;26.8;8000;arroser
+Carotte;70;20;6000;non arroser
+Carotte;58;22.0;7200;non arroser
+Carotte;60;21.8;7400;non arroser
+Carotte;57;20.0;7100;non arroser
+Carotte;52;19.5;6900;non arroser
+Carotte;65;24;7500;arroser
+Carotte;56;23.0;7300;arroser
+Carotte;54;20.8;7100;non arroser
+Carotte;59;23.5;7500;arroser
+Carotte;61;22.2;7600;arroser
+Carotte;57;21.7;7400;non arroser
+Carotte;53;20.5;7000;non arroser
+Carotte;58;24.0;7700;arroser
+Carotte;62;23.8;7800;arroser
+Carotte;56;22.5;7300;arroser
+Carotte;54;21.3;7100;non arroser
+Carotte;60;24.5;7900;arroser
+Carotte;57;23.7;7600;arroser
+Carotte;59;22.8;7500;arroser
+Menthe ;65;22.5;8000;arroser
+Menthe ;62;23.0;7800;arroser
+Menthe ;68;21.8;8200;arroser
+Menthe ;66;22.0;8100;arroser
+Menthe ;63;21.5;7900;non arroser
+Menthe ;70;22.2;8300;arroser
+Menthe ;67;22.8;8000;arroser
+Menthe ;72;21.7;8400;arroser
+Menthe ;69;22.5;8200;arroser
+Menthe ;66;22.3;8100;arroser
+Menthe ;64;21.8;7900;non arroser
+Menthe ;71;22.7;8300;arroser
+Menthe ;68;22.2;8000;arroser
+Menthe ;73;21.5;8400;arroser
+Menthe ;70;22.6;8200;arroser
+Menthe ;67;22.4;8100;arroser
+Menthe ;65;22.0;7900;non arroser
+Menthe ;72;22.9;8300;arroser
+Menthe ;69;22.3;8000;arroser
+Menthe ;74;21.4;8400;arroser
+citronnier;55;24.0;7500;non arroser
+citronnier;58;25.0;7700;arroser
+citronnier;52;23.5;7300;non arroser
+citronnier;56;24.5;7600;arroser
+citronnier;59;23.8;7400;non arroser
+citronnier;57;25.5;7800;arroser
+citronnier;54;23.2;7200;non arroser
+citronnier;60;26.0;7900;arroser
+citronnier;53;22.8;7100;non arroser
+citronnier;61;25.7;7800;arroser
+citronnier;56;24.2;7300;arroser
+citronnier;59;25.0;7600;non arroser
+citronnier;62;24.5;7500;arroser
+citronnier;57;25.8;7700;non arroser
+citronnier;54;23.0;7200;non arroser
+citronnier;58;26.2;7800;arroser
+citronnier;55;24.3;7100;non arroser
+citronnier;61;26.5;7900;arroser
+citronnier;56;23.5;7400;non arroser
+citronnier;60;26.0;7800;arroser
